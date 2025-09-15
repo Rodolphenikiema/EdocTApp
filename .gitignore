@@ -1,0 +1,65 @@
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Angular
+/frontend/EdoctApp/node_modules
+/frontend/EdoctApp/.angular/cache
+/frontend/EdoctApp/dist
+/frontend/EdoctApp/tmp
+/frontend/EdoctApp/.sass-cache
+/frontend/EdoctApp/connect.lock
+/frontend/EdoctApp/coverage
+/frontend/EdoctApp/libpeerconnection.log
+/frontend/EdoctApp/npm-debug.log
+/frontend/EdoctApp/yarn-error.log
+/frontend/EdoctApp/.pnpm-debug.log
+/frontend/EdoctApp/.idea
+/frontend/EdoctApp/.project
+/frontend/EdoctApp/.classpath
+/frontend/EdoctApp/.c9/
+/frontend/EdoctApp/*.launch
+/frontend/EdoctApp/.settings/
+/frontend/EdoctApp/*.sublime-workspace
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db
