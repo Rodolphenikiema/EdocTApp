@@ -64,3 +64,33 @@ ENV/
 # OS specific
 .DS_Store
 Thumbs.db
+
+# Angular - Chemins corrigés
+frontend-temp/node_modules/
+frontend-temp/.angular/
+frontend-temp/dist/
+frontend-temp/tmp/
+frontend-temp/.sass-cache/
+frontend-temp/connect.lock
+frontend-temp/coverage/
+frontend-temp/libpeerconnection.log
+frontend-temp/npm-debug.log
+frontend-temp/yarn-error.log
+frontend-temp/.pnpm-debug.log
+frontend-temp/.idea/
+frontend-temp/.project
+frontend-temp/.classpath
+frontend-temp/.c9/
+frontend-temp/*.launch
+frontend-temp/.settings/
+frontend-temp/*.sublime-workspace
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db
