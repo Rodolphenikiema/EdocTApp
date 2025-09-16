@@ -15,5 +15,31 @@ export class ApiService {
     return this.http.get(`${this.apiUrl}/hello/`);
   }
 
-  // Ajoutez d'autres méthodes selon vos besoins
+  // Authentification
+  login(credentials: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/auth/login/`, credentials);
+  }
+
+  register(userData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/auth/register/`, userData);
+  }
+
+  // Gestion des patients
+  getPatients(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/patients/`);
+  }
+
+  // Gestion des médecins
+  getDoctors(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/doctors/`);
+  }
+
+  // Rendez-vous
+  getAppointments(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/appointments/`);
+  }
+
+  createAppointment(appointment: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/appointments/`, appointment);
+  }
 }

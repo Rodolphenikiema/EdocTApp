@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accueil',
+  standalone: true,
   imports: [],
   templateUrl: './accueil.html',
   styleUrl: './accueil.css'
