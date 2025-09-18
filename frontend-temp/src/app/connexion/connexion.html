@@ -58,22 +58,51 @@
             <div class="col-md-7">
                 <h2 class="fw-bold text-primary text-center mb-3">CONNEXION</h2>
                 <p class="text-center mb-4" style="font-size:0.98rem;">Veuillez saisir les informations correctes</p>
-                <form>
+                
+                <!-- Message d'erreur -->
+                <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                    {{ errorMessage }}
+                </div>
+                
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                     <div class="mb-3 position-relative">
                         <span class="form-icon"><i class="bi bi-person"></i></span>
-                        <input type="text" class="form-control" placeholder="Nom d'utilisateur">
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            placeholder="Email"
+                            formControlName="mail"
+                            [class.is-invalid]="mail?.invalid && mail?.touched">
+                        <div *ngIf="mail?.invalid && mail?.touched" class="invalid-feedback">
+                            <div *ngIf="mail?.errors?.['required']">L'email est requis</div>
+                            <div *ngIf="mail?.errors?.['email']">Format d'email invalide</div>
+                        </div>
                     </div>
                     <div class="mb-3 position-relative form-group1">
                         <span class="form-icon"><i class="bi bi-lock"></i></span>
                         <div class="input-group">
-                            <input class="form-control" [type]="showPassword ? 'text' : 'password'" placeholder="Mot de passe">
-
-                        <span class="input-group-text" (click)="togglePassword()">
-                            <i class="beut" [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'"></i>
-                        </span>
+                            <input 
+                                class="form-control" 
+                                [type]="showPassword ? 'text' : 'password'" 
+                                placeholder="Mot de passe"
+                                formControlName="password"
+                                [class.is-invalid]="password?.invalid && password?.touched">
+                            <span class="input-group-text" (click)="togglePassword()">
+                                <i class="beut" [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'"></i>
+                            </span>
+                        </div>
+                        <div *ngIf="password?.invalid && password?.touched" class="invalid-feedback">
+                            <div *ngIf="password?.errors?.['required']">Le mot de passe est requis</div>
+                            <div *ngIf="password?.errors?.['minlength']">Le mot de passe doit contenir au moins 6 caractères</div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100 btn-login mb-2">CONNEXION</button>
+                    <button 
+                        type="submit" 
+                        class="btn btn-primary w-100 btn-login mb-2"
+                        [disabled]="isLoading">
+                        <span *ngIf="isLoading" class="spinner-border spinner-border-sm me-2" role="status"></span>
+                        {{ isLoading ? 'Connexion...' : 'CONNEXION' }}
+                    </button>
                     <div class="text-center forgot-link">
                         <a href="#">Mot de Passe oublié ?</a> | <a (click)="allerVersins()">Je n'ai pas de compte</a>
                     </div>
