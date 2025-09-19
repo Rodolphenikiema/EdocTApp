@@ -31,28 +31,89 @@ wheels/
 
 # Virtual Environment
 venv/
+.venv/
 env/
 ENV/
 
-# Angular
-/frontend/EdoctApp/node_modules
-/frontend/EdoctApp/.angular/cache
-/frontend/EdoctApp/dist
-/frontend/EdoctApp/tmp
-/frontend/EdoctApp/.sass-cache
-/frontend/EdoctApp/connect.lock
-/frontend/EdoctApp/coverage
-/frontend/EdoctApp/libpeerconnection.log
-/frontend/EdoctApp/npm-debug.log
-/frontend/EdoctApp/yarn-error.log
-/frontend/EdoctApp/.pnpm-debug.log
-/frontend/EdoctApp/.idea
-/frontend/EdoctApp/.project
-/frontend/EdoctApp/.classpath
-/frontend/EdoctApp/.c9/
-/frontend/EdoctApp/*.launch
-/frontend/EdoctApp/.settings/
-/frontend/EdoctApp/*.sublime-workspace
+# Angular - Chemins corrigés pour votre structure
+/frontend-temp/node_modules/
+/frontend-temp/.angular/
+/frontend-temp/dist/
+/frontend-temp/tmp/
+/frontend-temp/.sass-cache/
+/frontend-temp/connect.lock
+/frontend-temp/coverage/
+/frontend-temp/libpeerconnection.log
+/frontend-temp/npm-debug.log
+/frontend-temp/yarn-error.log
+/frontend-temp/.pnpm-debug.log
+/frontend-temp/.idea/
+/frontend-temp/.project
+/frontend-temp/.classpath
+/frontend-temp/.c9/
+/frontend-temp/*.launch
+/frontend-temp/.settings/
+/frontend-temp/*.sublime-workspace
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Angular - Chemins corrigés
+frontend-temp/node_modules/
+frontend-temp/.angular/
+frontend-temp/dist/
+frontend-temp/tmp/
+frontend-temp/.sass-cache/
+frontend-temp/connect.lock
+frontend-temp/coverage/
+frontend-temp/libpeerconnection.log
+frontend-temp/npm-debug.log
+frontend-temp/yarn-error.log
+frontend-temp/.pnpm-debug.log
+frontend-temp/.idea/
+frontend-temp/.project
+frontend-temp/.classpath
+frontend-temp/.c9/
+frontend-temp/*.launch
+frontend-temp/.settings/
+frontend-temp/*.sublime-workspace
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Angular - Chemins corrigés
+frontend-temp/node_modules/
+frontend-temp/.angular/
+frontend-temp/dist/
+frontend-temp/tmp/
+frontend-temp/.sass-cache/
+frontend-temp/connect.lock
+frontend-temp/coverage/
+frontend-temp/libpeerconnection.log
+frontend-temp/npm-debug.log
+frontend-temp/yarn-error.log
+frontend-temp/.pnpm-debug.log
+frontend-temp/.idea/
+frontend-temp/.project
+frontend-temp/.classpath
+frontend-temp/.c9/
+frontend-temp/*.launch
+frontend-temp/.settings/
+frontend-temp/*.sublime-workspace
 
 # IDE
 .idea/
