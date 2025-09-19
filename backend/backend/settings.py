@@ -85,16 +85,32 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 # Database - Configuration MAMP MySQL
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'edoctapp_db',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'HOST': '127.0.0.1',
+#         'PORT': '8889',
+#         'OPTIONS': {
+#             'charset': 'utf8mb4',
+#             'autocommit': True,
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#         },
+#     }
+# }
+#j'USTE ICI LA CONFIGURATION POUR MAMP MySQL,moi Adrien j'utilise wamp donc j'ai mis la config pour wamp
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'edoctapp_db',
         'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
-        'PORT': '8889',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '8080',
         'OPTIONS': {
-            'charset': 'utf8mb4',
+            'charset': 'utf8mb3',
             'autocommit': True,
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
