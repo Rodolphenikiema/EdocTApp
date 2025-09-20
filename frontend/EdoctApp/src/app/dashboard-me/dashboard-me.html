@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau de Bord Médecin - E-Doct</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom pt-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-left" href="#">
+                <img src="img/Logo1.png" class="logo-icon" alt="Logo e-Doct" style="height: 50px;">
+                <span class="logo-text">e-DocT</span>
+            </a>
+            <!-- Bouton burger -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse align-right" id="navbarNav">
+                <ul class="nav nav-pills ms-auto " >
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="monCompte" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mon Compte
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="monCompte">
+                            <li><a class="dropdown-item" href="#">Profil</a></li>
+                            <li><a class="dropdown-item" href="#">Paramètres</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">A propos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Tableau de bord -->
+    <div class="dashboard-container mt-4">
+        <div class="sidebar" id="sidebar">
+            <button id="toggleSidebar" class="btn btn-light mb-3 d-md-block d-lg-none" style="align-self: flex-end;">
+                <i class="bi bi-list white" ></i>
+            </button>
+            <div class="profile-pic">
+                <i class="bi bi-person-circle"></i>
+            </div>
+            <div class="profile-info">
+                Nom: Dr Sarr<br>
+                Profession: Cardiologue
+            </div>
+            <nav class="nav flex-column w-100">
+                <a class="nav-link active" href="#"><i class="bi bi-grid"></i> Tableau de Bord</a>
+                <a class="nav-link" href="#"><i class="bi bi-calendar-event"></i> Rendez-vous</a>
+                <a class="nav-link" href="#"><i class="bi bi-chat-dots"></i> Messages</a>
+                <a class="nav-link" href="#"><i class="bi bi-credit-card"></i> Paiement</a>
+                <a class="nav-link" href="#"><i class="bi bi-bell"></i> Notifications</a>
+                <a class="nav-link" href="#"><i class="bi bi-download"></i> Téléchargement</a>
+                <a class="nav-link" href="#"><i class="bi bi-file-earmark-medical"></i> Ordonnances</a>
+                <a class="nav-link" href="#"><i class="bi bi-gear"></i> Mon Profil</a>
+            </nav>
+        </div>
+        <div class="main-content">
+            <div class="d-flex align-items-center justify-content-center mb-4">
+                <img src="img/inf2.png" alt="Médecin" class="doctor-img">
+                <div class="dashboard-title w-100">BIENVENUE DANS VOTRE TABLEAU DE BORD MÉDECIN</div>
+            </div>
+            <div class="dashboard-row">
+                <div class="dashboard-card">
+                    <div class="icon"><i class="bi bi-calendar2-week"></i></div>
+                    <div class="label">PROCHAINS RENDEZ-VOUS</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon"><i class="bi bi-play-circle"></i></div>
+                    <div class="label">CONSULTATIONS</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon"><i class="bi bi-folder2-open"></i></div>
+                    <div class="label">DOSSIERS PATIENTS</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon"><i class="bi bi-file-earmark-medical"></i></div>
+                    <div class="label">ORDONNANCES</div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon"><i class="bi bi-bell"></i></div>
+                    <div class="label">NOTIFICATIONS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggleSidebar');
+    let folded = false;
+
+    toggleBtn.addEventListener('click', function() {
+        folded = !folded;
+        if (folded) {
+            sidebar.style.width = '80px';
+            sidebar.querySelectorAll('.profile-pic, .profile-info, .nav-link span').forEach(el => {
+                if(el) el.style.display = 'none';
+            });
+            sidebar.querySelectorAll('.nav-link i').forEach(el => {
+                el.style.marginRight = '-10px';
+            });
+        } else {
+            sidebar.style.width = '';
+            sidebar.querySelectorAll('.profile-pic, .profile-info, .nav-link span').forEach(el => {
+                if(el) el.style.display = '';
+            });
+            sidebar.querySelectorAll('.nav-link i').forEach(el => {
+                el.style.marginRight = '0';
+            });
+        }
+    });
+    function checkSidebar() {
+        if (window.innerWidth <= 900) {
+            sidebar.classList.add('closed');
+        } else {
+            sidebar.classList.remove('closed');
+        }
+    }
+    checkSidebar();
+    window.addEventListener('resize', checkSidebar);
+
+    toggleBtn.addEventListener('click', function() {
+        sidebar.classList.toggle('open');
+    });
+
+    // Pour afficher uniquement les icônes dans la sidebar, modifiez les liens de navigation :
+    document.querySelectorAll('.sidebar .nav-link').forEach(link => {
+        const text = link.childNodes[1];
+        if (text && text.nodeType === 3) {
+            const span = document.createElement('span');
+            span.textContent = text.textContent;
+            link.removeChild(text);
+            link.appendChild(span);
+        }
+    });
+    </script>
+</body>
+</html>

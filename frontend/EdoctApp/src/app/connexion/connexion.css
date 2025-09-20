@@ -1,0 +1,139 @@
+body {
+            height: 100vh;
+            background: linear-gradient(120deg, #7c8ecf9c, #9f98d488),url(/img/image1.jpg);
+            background-size: cover;
+        }
+.forgot-link a {
+  margin: 0 10px;
+  color: #3376c6;
+  text-decoration: none;
+}
+.forgot-link a:hover{
+    text-decoration: underline;
+    color: #0581ee;
+    cursor: pointer;
+}
+.login-container {
+            background: rgba(255,255,255,0.8);
+            border-radius: 25px;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+            padding: 40px 30px;
+            max-width: 700px;
+            margin: 60px auto;}
+        .login-img {
+            width: 260px;
+        }
+        .position-relative{
+            border: 1px solid #ced4da;
+             border-radius: 50px;
+             height: 50px;
+        }
+    .form-control{
+            background: transparent;
+            border: none;
+            width: 85%;
+            margin-bottom: 18px;
+            margin-left: 40px;
+            margin-top: 7px;
+        }
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #4a90e2;
+            background: transparent;
+        }
+        .form-label {
+            font-weight: 500;
+        }
+        .btn-primary {
+            background: #4a90e2;
+            border-radius: 20px;
+            border: none;
+            padding: 10px 20px;
+        }
+        .btn-primary:hover {
+            background-color: #3376c6;
+        }
+        .login-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+    }
+       
+        .btn-login {
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+         .logo-text {
+      font-size: 34px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+        .form-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+        .bi{
+            color: #0581ee;
+            background-color: #ffffff;
+            border-radius: 50%;
+            padding: 5px 5px 5px 8px !important;
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            left: -10px;
+        }
+        .input-group .form-control {
+            padding-left: 40px;
+        }
+        .input-group-text {
+            background: transparent;
+            border: none;
+        }
+        .forgot-link {
+            font-size: 0.95rem;
+        }
+        .brand-logo {
+            width: 120px;
+        }
+        .nav-pills .nav-link.active {
+            background: #fff;
+            color: #3376c6;
+            font-weight: bold;
+        }
+       .beut{
+        cursor: pointer;
+        font-size: 1.3rem;
+        color: #0581ee;
+        position: relative;
+        left: 310px;
+        top: -60px;
+       }
+             .navbar {
+            background: transparent;
+            display: flex;
+        }
+               .nav-pills .nav-link.active {
+            background: #fff;
+            color: #3376c6;
+            font-weight: bold;
+        }
+     .navbar-collapse{
+            background: white;
+      border-radius: 50px;
+      padding: 8px 20px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+      transition: all 0.3s ease-in-out;
+      max-width: 390px ;
+        }
+    .logo-text {
+      font-size: 34px;
+      font-weight: 600;
+      color: #ffffff;
+    }

@@ -1,0 +1,266 @@
+      body {
+             background: linear-gradient(120deg, #7c8ecf9c, #9f98d488),url(/img/image1.jpg);
+            background-size: cover;
+            height: 120vh;
+        }
+        .navbar {
+            background: transparent;
+        }
+         .nav-pills .nav-link.active {
+            background: #fff;
+            color: #3376c6;
+            font-weight: bold;
+        }
+     .navbar-collapse{
+            background: white;
+      border-radius: 50px;
+      padding: 8px 20px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+      transition: all 0.3s ease-in-out;
+      max-width:390px ;
+        }
+    .logo-text {
+      font-size: 34px;
+      color: #ffffff;
+      font-weight: 600;
+    }
+        .dashboard-container {
+            background: rgba(255,255,255,0.95);
+            border-radius: 30px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            max-width: 950px;
+            margin: 40px auto;
+            display: flex;
+            min-height: 500px;
+            overflow: hidden;
+        }
+        .sidebar {
+            background: #4a6fdc;
+            color: #fff;
+            width: 220px;
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-pic {
+            background: #fff;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            color: #4a6fdc;
+        }
+        .profile-info {
+            text-align: center;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+        .sidebar .nav-link {
+            color: #fff;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sidebar .nav-link.active, .sidebar .nav-link:hover {
+            background: #fff;
+            color: #4a6fdc;
+        }
+        .main-content {
+            flex: 1;
+            padding: 35px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .patient-title {
+            color: #3570c7;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            text-align: left;
+            width: 100%;
+        }
+        .patient-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .patient-avatar {
+            background: #3570c7;
+            color: #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+        }
+        .patient-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #3570c7;
+        }
+        .patient-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 1.2fr 1.2fr;
+            grid-gap: 18px;
+            margin-bottom: 18px;
+        }
+        .patient-grid .patient-card {
+            background: #eaeaea;
+            border-radius: 14px;
+            padding: 18px;
+            box-sizing: border-box;
+            min-height: 180px;
+        }
+        .patient-grid .patient-card .btn {
+            background: #5a7ecb;
+            color: #fff;
+            border-radius: 14px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 18px;
+            margin-top: 10px;
+        }
+        .patient-card {
+            background: #eaeaea;
+            border-radius: 14px;
+            padding: 18px 18px 18px 18px;
+            margin-bottom: 0;
+            min-height: 180px;
+            box-sizing: border-box;
+        }
+        .patient-card .btn {
+            background: #5a7ecb;
+            color: #fff;
+            border-radius: 14px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 18px;
+            margin-top: 10px;
+        }
+        .patient-info-list {
+            font-size: 1.05rem;
+            color: #222;
+            margin-bottom: 0.5rem;
+        }
+        .patient-info-list span {
+            display: inline-block;
+            min-width: 120px;
+            color: #3570c7;
+        }
+        .patient-card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        .med-list, .lab-list {
+            font-size: 1.05rem;
+            color: #222;
+            margin-bottom: 0.5rem;
+        }
+        .vital-signs {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .vital-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .vital-icon {
+            font-size: 2rem;
+            color: #222;
+        }
+        .vital-label {
+            font-size: 1.05rem;
+            color: #3570c7;
+            font-weight: 500;
+        }
+        .vital-value {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #222;
+        }
+        .vital-impulse {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        .patient-bottom-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.2fr 1.2fr;
+            grid-gap: 18px;
+            margin-top: 8px;
+        }
+        .notes-title, .lab-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #3570c7;
+            margin-bottom: 8px;
+        }
+        .notes-date {
+            font-size: 1rem;
+            color: #222;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .notes-content {
+            font-size: 0.98rem;
+            color: #222;
+            background: #fff;
+            border-radius: 8px;
+            padding: 8px 10px;
+        }
+        .lab-list-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.02rem;
+            background: #fff;
+            border-radius: 8px;
+            padding: 6px 10px;
+            margin-bottom: 6px;
+        }
+        @media (max-width: 1100px) {
+            .patient-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 900px) {
+            .dashboard-container {
+                flex-direction: column;
+                max-width: 98vw;
+            }
+            .sidebar {
+                display: none !important;
+            }
+            .main-content {
+                padding: 25px 5px;
+            }
+            .patient-grid, .patient-bottom-grid {
+                grid-template-columns: 1fr;
+                grid-gap: 12px;
+            }
+        }
+        @media (max-width: 600px) {
+            .patient-title {
+                font-size: 1.1rem;
+            }
+            .patient-card {
+                padding: 10px 6px;
+            }
+        }
